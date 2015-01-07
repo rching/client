@@ -1,0 +1,26 @@
+# curl -d proto=gcm -d token=d0 http://localhost:8080/subscribers
+{
+  "proto": "gcm",
+  "token": "d0",
+  "updated": 1414160559,
+  "created": 1414160559,
+  "id": "bgLb_K5Xzs0"
+}root@skychat:/mnt/dev/qbt/x86/server/client# curl X POST   http://localhost:8080/subscriber/bgLb_K5Xzs0
+root@skychat:/mnt/dev/qbt/x86/server/client# 
+root@skychat:/mnt/dev/qbt/x86/server/client# 
+root@skychat:/mnt/dev/qbt/x86/server/client# curl -X POST   http://localhost:8080/subscriber/bgLb_K5Xzs0/subscriptions/event
+Createdroot@skychat:/mnt/dev/qbt/x86/server/client# 
+root@skychat:/mnt/dev/qbt/x86/server/client# 
+root@skychat:/mnt/dev/qbt/x86/server/client# 
+root@skychat:/mnt/dev/qbt/x86/server/client# curl http://localhost/subscribe?events=event
+curl: (7) Failed to connect to localhost port 80: Connection refused
+root@skychat:/mnt/dev/qbt/x86/server/client# curl http://localhost:8080/subscribe?events=event
+
+
+
+......
+
+
+
+
+# curl -X POST -d data.action=create http://localhost:8080/event/event
